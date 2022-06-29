@@ -12,7 +12,7 @@ export default class List extends React.Component{
 
 	componentDidMount() {
 
-        axios.post('http://localhost:5000/listv',{id:this.props.id})
+        axios.post('https://bulkbackend.herokuapp.com/listv',{id:this.props.id})
              .then(res => {
                  this.setState(res.data)
              })

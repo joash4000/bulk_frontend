@@ -45,7 +45,7 @@ export default class Add extends React.Component{
         var  lid
         const List= this.state
         delete List.files
-        await axios.post('http://localhost:5000/add', List)
+        await axios.post('https://bulkbackend.herokuapp.com/add', List)
                  .then(res => {
                    if(res.data.success==true){
                    		lid = res.data.listid
@@ -64,7 +64,7 @@ export default class Add extends React.Component{
 	        formData.append('file',this.state.file,lid)
 	        console.log(formData)
 
-	        axios.post('http://localhost:5000/image', formData)
+	        axios.post('https://bulkbackend.herokuapp.com/image', formData)
                  .then(res => {
                    console.log(res)
                  });	

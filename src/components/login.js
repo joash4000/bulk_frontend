@@ -40,7 +40,7 @@ export default class  LoginTemplate extends React.Component {
         if(this.props.mode=="register")
 	        if (this.props.user=="user")
 	        {
-		        axios.post('http://localhost:5000/adduser', newUser)
+		        axios.post('https://bulkbackend.herokuapp.com/adduser', newUser)
 		             .then(res => {
                   if(res.data.success==false)
                   {
@@ -58,7 +58,7 @@ export default class  LoginTemplate extends React.Component {
 		    }
 		    else
 		    {
-	   			axios.post('http://localhost:5000/addvendor', newUser)
+	   			axios.post('https://bulkbackend.herokuapp.com/addvendor', newUser)
 		             .then(res => {
                   if(res.data.success==false)
                   {
@@ -77,7 +77,7 @@ export default class  LoginTemplate extends React.Component {
 		  else{
 			if (this.props.user=="user")
 	        {
-		        axios.post('http://localhost:5000/checkuser', newUser)
+		        axios.post('https://bulkbackend.herokuapp.com/checkuser', newUser)
 		             .then(res => {
                    if(res.data.success==true)
                    {
@@ -94,7 +94,7 @@ export default class  LoginTemplate extends React.Component {
 		    }
 		    else
 		    {
-	   			axios.post('http://localhost:5000/checkvendor', newUser)
+	   			axios.post('https://bulkbackend.herokuapp.com/checkvendor', newUser)
 		             .then(res => 
                  {
                    if(res.data.success==true)

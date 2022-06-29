@@ -9,7 +9,7 @@ export default class Track extends React.Component{
   }
 
   componentDidMount() {
-        axios.get('http://localhost:5000/getlist')
+        axios.get('https://bulkbackend.herokuapp.com/getlist')
              .then(response => {
                  this.setState(response.data);
              })

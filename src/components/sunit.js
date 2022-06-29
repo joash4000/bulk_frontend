@@ -18,7 +18,7 @@ export default class US extends React.Component{
 		e.preventDefault()
 		const Rq={...this.state,lid:this.props.itm._id}
 		// console.log(Rq)
-		 axios.post('http://localhost:5000/buy',Rq)
+		 axios.post('https://bulkbackend.herokuapp.com/buy',Rq)
              .then(res => {
                  window.location.reload()
              })

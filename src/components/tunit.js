@@ -20,7 +20,7 @@ export default class List extends React.Component{
 		
 		const Rq={qn:ps.toString(),bid:this.state.bid,bname:this.props.uname,lid:this.props.itm._id}
 		
-		 axios.post('http://localhost:5000/edit',Rq)
+		 axios.post('https://bulkbackend.herokuapp.com/edit',Rq)
              .then(res => {
                  window.location.reload()
              })

@@ -19,7 +19,7 @@ export default class RS extends React.Component{
    onSubmit(e){
 		e.preventDefault()
 	 console.log("jadu")
-		axios.post('http://localhost:5000/addrate',this.state)
+		axios.post('https://bulkbackend.herokuapp.com/addrate',this.state)
          .then(res => {
              window.location.reload()
              console.log("sex")

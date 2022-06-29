@@ -33,7 +33,7 @@ export default class List extends React.Component{
         if(mode="all"){
             t="fds"
         }
-        axios.post('http://localhost:5000/status', {id:this.props.itm._id,what:"dispatch"})
+        axios.post('https://bulkbackend.herokuapp.com/status', {id:this.props.itm._id,what:"dispatch"})
                  .then(res => {
                    if(res.data.success==true)
                    {
@@ -50,7 +50,7 @@ export default class List extends React.Component{
         // e.preventDefault();
 
      
-        axios.post('http://localhost:5000/status', {id:this.props.itm._id,what:"dish"})
+        axios.post('https://bulkbackend.herokuapp.com/status', {id:this.props.itm._id,what:"dish"})
                  .then(res => {
                    if(res.data.success==true)
                    {
